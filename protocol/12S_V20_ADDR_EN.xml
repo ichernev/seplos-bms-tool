@@ -1,0 +1,2314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<protocolConfig>
+  <filetype>Protocol</filetype>
+  <modeText_Group />
+  <maintainHistory />
+  <basicConfig>
+    <protocolName>BMS-12S</protocolName>
+    <protocolVersion>2.0</protocolVersion>
+    <ignoreCheckRTN>0</ignoreCheckRTN>
+    <ignoreCheckLEN>0</ignoreCheckLEN>
+    <freshMode>Continuous</freshMode>
+    <freshDuty>2</freshDuty>
+    <batVoltName>Total voltage</batVoltName>
+    <batAmpName>Current</batAmpName>
+    <batCurCapName>Remaining capacity</batCurCapName>
+    <batAllCapName>Total capacity</batAllCapName>
+    <cellTmprPreName>Battery temp</cellTmprPreName>
+    <protocolMeterTmprType>K</protocolMeterTmprType>
+    <protocolParaTmprType>K</protocolParaTmprType>
+  </basicConfig>
+  <teleMeter_Group>
+    <teleMeter_Block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <teleMeterType>Cell</teleMeterType>
+      <teleMeterNode>
+        <Name>Cell01</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell02</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell03</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell04</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell05</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell06</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell07</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell08</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell09</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell10</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell11</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Cell12</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+    </teleMeter_Block>
+    <teleMeter_Block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <teleMeterType>Tmpr</teleMeterType>
+      <teleMeterNode>
+        <Name>Battery temp1</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Battery temp2</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Battery temp3</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Battery temp4</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Ambient temp</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Power temp</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+    </teleMeter_Block>
+    <teleMeter_Block>
+      <NumFieldEnable>False</NumFieldEnable>
+      <teleMeterType>Other</teleMeterType>
+      <teleMeterNode>
+        <Name>Current</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>A</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Total voltage</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Remaining capacity</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>Ah</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+    </teleMeter_Block>
+    <teleMeter_Block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <teleMeterType>Other</teleMeterType>
+      <teleMeterNode>
+        <Name>Total capacity</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>Ah</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>SOC</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>%</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Rated capacity</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>Ah</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Battery cycles</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>times</UnitName>
+        <Scale>1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>SOH</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>%</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+      <teleMeterNode>
+        <Name>Bus voltage</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+    </teleMeter_Block>
+  </teleMeter_Group>
+  <teleControl_Group>
+    <teleCtrlByteNum>2</teleCtrlByteNum>
+    <teleControl>
+      <Name>Discharge control</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>0</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+    <teleControl>
+      <Name>Charge control</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>1</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+    <teleControl>
+      <Name>Current limit control</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>2</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+    <teleControl>
+      <Name>Temperature control</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>3</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+    <teleControl>
+      <Name>System shutdown</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>4</BitIndex>
+      <Type>Shutdown</Type>
+    </teleControl>
+    <teleControl>
+      <Name>Restore factory</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>5</BitIndex>
+      <Type>Reset</Type>
+    </teleControl>
+  </teleControl_Group>
+  <teleSignal_Group>
+    <teleSignal_block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <SignalType>GB_Byte</SignalType>
+      <teleSignalGB>
+        <Name>Cell01</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell01</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell02</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell02</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell03</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell03</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell04</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell04</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell05</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell05</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell06</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell06</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell07</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell07</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell08</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell08</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell09</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell09</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell10</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell10</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell11</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell11</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Cell12</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Cell12</LinkTeleMeterName>
+      </teleSignalGB>
+    </teleSignal_block>
+    <teleSignal_block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <SignalType>GB_Byte</SignalType>
+      <teleSignalGB>
+        <Name>Battery temp1</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Battery temp1</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Battery temp2</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Battery temp2</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Battery temp3</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Battery temp3</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Battery temp4</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Battery temp4</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Ambient temp</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Ambient temp</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Power temp</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Power temp</LinkTeleMeterName>
+      </teleSignalGB>
+    </teleSignal_block>
+    <teleSignal_block>
+      <NumFieldEnable>False</NumFieldEnable>
+      <SignalType>GB_Byte</SignalType>
+      <teleSignalGB>
+        <Name>Current</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Current</LinkTeleMeterName>
+      </teleSignalGB>
+      <teleSignalGB>
+        <Name>Total voltage</Name>
+        <Type>Protect</Type>
+        <LinkTeleMeterName>Total voltage</LinkTeleMeterName>
+      </teleSignalGB>
+    </teleSignal_block>
+    <teleSignal_block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <SignalType>Ext_Bit</SignalType>
+      <ByteNumAdjust>-1</ByteNumAdjust>
+      <teleSignal>
+        <Name>Voltage sensor invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Temperature sensor invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Current sensor invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Button switch invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Cell differential pressure invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charge switch invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge switch invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Current limit switch invalidation</Name>
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Monomer high voltage alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Monomer overvoltage protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Monomer low pressure alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Monomer undervoltage protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Total pressure high pressure alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Total_voltage overvoltage protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Total pressure low pressure alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Total_voltage undervoltage protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charging high temperature warning</Name>
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charging over temperature protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charging low temperature warning</Name>
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charging under-temperature protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge high temperature warning</Name>
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge over temperature protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge low temperature warning</Name>
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge under-temperature protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Ambient high temperature alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Environmental over-temperature protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Ambient low temperature alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Environmental under-temperature protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Power over temperature protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Power high temperature alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Cell low temperature heating</Name>
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Secondary tripping protection</Name>
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charging overcurrent warning</Name>
+        <Type>Warn</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charge overcurrent protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge overcurrent warning</Name>
+        <Type>Warn</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge overcurrent protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Transient current protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Output short circuit protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Transient protection lockout</Name>
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Short circuit protection lockout</Name>
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charging high voltage protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Intermittent power supply waiting</Name>
+        <Type>Warn</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Remaining capacity alarm</Name>
+        <Type>Warn</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Remaining capacity protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Battery low voltage forbidden charging</Name>
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Output reverse connection protection</Name>
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Output connection failure</Name>
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Discharge switch</Name>
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>0</BitIndex>
+        <linkTeleCtrlName>Discharge control</linkTeleCtrlName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Charging switch</Name>
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>1</BitIndex>
+        <linkTeleCtrlName>Charge control</linkTeleCtrlName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Current limit switch</Name>
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>2</BitIndex>
+        <linkTeleCtrlName>Current limit control</linkTeleCtrlName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Temperature control switch</Name>
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>3</BitIndex>
+        <linkTeleCtrlName>Temperature control</linkTeleCtrlName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization1</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>0</BitIndex>
+        <LinkTeleMeterName>Cell01</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization2</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>1</BitIndex>
+        <LinkTeleMeterName>Cell02</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization3</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>2</BitIndex>
+        <LinkTeleMeterName>Cell03</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization4</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>3</BitIndex>
+        <LinkTeleMeterName>Cell04</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization5</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>4</BitIndex>
+        <LinkTeleMeterName>Cell05</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization6</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>5</BitIndex>
+        <LinkTeleMeterName>Cell06</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization7</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>6</BitIndex>
+        <LinkTeleMeterName>Cell07</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization8</Name>
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>7</BitIndex>
+        <LinkTeleMeterName>Cell08</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization9</Name>
+        <Type>Normal</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>0</BitIndex>
+        <LinkTeleMeterName>Cell09</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization10</Name>
+        <Type>Normal</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>1</BitIndex>
+        <LinkTeleMeterName>Cell10</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization11</Name>
+        <Type>Normal</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>2</BitIndex>
+        <LinkTeleMeterName>Cell11</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Equalization12</Name>
+        <Type>Normal</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>3</BitIndex>
+        <LinkTeleMeterName>Cell12</LinkTeleMeterName>
+      </teleSignal>
+      <teleSignal>
+        <Name>Automatic charging waiting</Name>
+        <Type>Warn</Type>
+        <ByteIndex>12</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Manual charging and waiting</Name>
+        <Type>Warn</Type>
+        <ByteIndex>12</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>EEPROM malfunction</Name>
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>RTC clock malfunction</Name>
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Voltage calibration not done</Name>
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Current calibration not done</Name>
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Zero point calibration not done</Name>
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+      <teleSignal>
+        <Name>Perpetual calendar is not synchronized</Name>
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+    </teleSignal_block>
+    <teleSignal_block>
+      <NumFieldEnable>False</NumFieldEnable>
+      <SignalType>Mode_Byte</SignalType>
+      <modeText>
+        <value>1</value>
+        <text>Discharge</text>
+      </modeText>
+      <modeText>
+        <value>2</value>
+        <text>Charge</text>
+      </modeText>
+      <modeText>
+        <value>4</value>
+        <text>Float</text>
+      </modeText>
+      <modeText>
+        <value>8</value>
+        <text>Fully charged</text>
+      </modeText>
+      <modeText>
+        <value>10</value>
+        <text>Standby</text>
+      </modeText>
+      <modeText>
+        <value>20</value>
+        <text>Shutdown</text>
+      </modeText>
+    </teleSignal_block>
+  </teleSignal_Group>
+  <int_para_Group>
+    <int_para>
+      <Name>Monomer high voltage alarm</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>0</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Monomer high pressure recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>1</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Monomer low pressure alarm</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>2</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Monomer low pressure recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Monomer overvoltage protection</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>4</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Monomer overvoltage recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>5</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Monomer undervoltage protection</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>6</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Monomer undervoltage recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>7</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Equalization opening voltage</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>8</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Battery low voltage forbidden charging</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>9</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total pressure high pressure alarm</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total pressure and high pressure recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total pressure low pressure alarm</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>C</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total pressure and low pressure recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>D</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total_voltage overvoltage protection</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>E</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total pressure overpressure recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>F</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total_voltage undervoltage protection</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>10</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Total pressure undervoltage recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>11</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Harging overvoltage protection</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>12</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging overvoltage recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>13</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging high temperature warning</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>14</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging high temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>15</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging low temperature warning</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>16</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging low temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>17</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging over temperature protection</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>18</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging over temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>19</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging under-temperature protection</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging under temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge high temperature warning</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1C</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge high temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1D</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge low temperature warning</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1E</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge low temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1F</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge over temperature protection</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>20</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge over temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>21</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge under-temperature protection</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>22</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge under temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>23</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Cell low temperature heating</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>24</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Cell heating recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>25</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Ambient high temperature alarm</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>26</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Ambient high temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>27</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Ambient low temperature alarm</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>28</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Ambient low temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>29</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Environmental over-temperature protection</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Environmental overtemperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Environmental under-temperature protection</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2C</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Environmental undertemperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2D</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Power high temperature alarm</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2E</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Power high temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2F</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Power over temperature protection</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>30</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Power over temperature recovery</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>31</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging overcurrent warning</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>32</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging overcurrent recovery</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>33</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge overcurrent warning</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>34</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge overcurrent recovery</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>35</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charge overcurrent protection</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>36</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge overcurrent protection</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>37</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Transient overcurrent protection</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>38</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Output soft start delay</Name>
+      <UnitName>mS</UnitName>
+      <ParaIndex>39</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Battery rated capacity</Name>
+      <UnitName>Ah</UnitName>
+      <ParaIndex>3A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>SOC</Name>
+      <UnitName>Ah</UnitName>
+      <ParaIndex>3B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Cell invalidation differential pressure</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3C</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Cell invalidation recovery</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3D</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+    <int_para>
+      <Name>Equalization opening pressure difference</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3E</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Equalization closing pressure difference</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3F</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+    <int_para>
+      <Name>Static equilibrium time</Name>
+      <UnitName>When</UnitName>
+      <ParaIndex>40</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Battery number in series</Name>
+      <UnitName>String</UnitName>
+      <ParaIndex>41</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charge overcurrent delay</Name>
+      <UnitName>S</UnitName>
+      <ParaIndex>42</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Discharge overcurrent delay</Name>
+      <UnitName>S</UnitName>
+      <ParaIndex>43</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Transient overcurrent delay</Name>
+      <UnitName>mS</UnitName>
+      <ParaIndex>44</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Overcurrent delay recovery</Name>
+      <UnitName>S</UnitName>
+      <ParaIndex>45</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Overcurrent recovery times</Name>
+      <UnitName>times</UnitName>
+      <ParaIndex>46</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charge current limit delay</Name>
+      <UnitName>Minutes</UnitName>
+      <ParaIndex>47</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charge activation delay</Name>
+      <UnitName>Minutes</UnitName>
+      <ParaIndex>48</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charging activation interval</Name>
+      <UnitName>When</UnitName>
+      <ParaIndex>49</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Charge activation times</Name>
+      <UnitName>times</UnitName>
+      <ParaIndex>4A</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Work record interval</Name>
+      <UnitName>Minutes</UnitName>
+      <ParaIndex>4B</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Standby recording interval</Name>
+      <UnitName>Minutes</UnitName>
+      <ParaIndex>4C</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Standby shutdown delay</Name>
+      <UnitName>When</UnitName>
+      <ParaIndex>4D</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Remaining capacity alarm</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>4E</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Remaining capacity protection</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>4F</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Interval charge capacity</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>50</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Cycle cumulative capacity</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>51</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Connection fault impedance</Name>
+      <UnitName>mΩ</UnitName>
+      <ParaIndex>52</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Compensation point 1 position</Name>
+      <UnitName>String</UnitName>
+      <ParaIndex>53</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Compensation point 1 impedance</Name>
+      <UnitName>mΩ</UnitName>
+      <ParaIndex>54</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Ompensation point 2 position</Name>
+      <UnitName>String</UnitName>
+      <ParaIndex>55</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    <int_para>
+      <Name>Compensation point 2 impedance</Name>
+      <UnitName>mΩ</UnitName>
+      <ParaIndex>56</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+  </int_para_Group>
+  <bit_para_Group>
+    <bitParaStartIndex>58</bitParaStartIndex>
+    <bitParaByteNum>8</bitParaByteNum>
+    <bit_para>
+      <Name>Voltage sensor invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Temperature sensor invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Current sensor invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Button switch invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Cell differential pressure invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charge switch invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Discharge switch invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Current limit switch invalidation</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Monomer high voltage alarm</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Monomer overvoltage protection</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Monomer low pressure alarm</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Monomer undervoltage protection</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Total pressure high pressure alarm</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Total_voltage overvoltage protection</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Total pressure low pressure alarm</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Total_voltage undervoltage protection</Name>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charging high temperature warning</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charging over temperature protection</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charging low temperature warning</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charging under-temperature protection</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Discharge high temperature warning</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Discharge over temperature protection</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Discharge low temperature warning</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Discharge under-temperature protection</Name>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Ambient high temperature alarm</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Environmental over-temperature protection</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Ambient low temperature alarm</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Environmental under-temperature protection</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Power over temperature protection</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Power high temperature alarm</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Cell low temperature heating</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Secondary tripping protection</Name>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charging overcurrent warning</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charge overcurrent protection</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Discharge overcurrent warning</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Discharge overcurrent protection</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Transient current protection</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Output short circuit protection</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Transient overcurrent lockout</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Output short circuit locking</Name>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charging high voltage protection</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Intermittent charging function</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Remaining capacity alarm</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Remaining capacity protection</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Battery low voltage forbidden charging</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Output reverse connection protection</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Output connection failure</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Output soft start function</Name>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Charge equalization function</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Static equilibrium function</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Timeout prohibits equalization</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Over temperature prohibits equalization</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Automatically activate charging</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Manually activate charging</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Take the initiative current limiting charging</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Passive current limiting charging</Name>
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Switch shut down function</Name>
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Standby shutdown function</Name>
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>History record function</Name>
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>LCD display function</Name>
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Bluetooth communication function</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Automatic address coding</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>	
+    <bit_para>
+      <Name>Parallel external polling</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    <bit_para>
+      <Name>Single BMS 1.0C charging</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+  </bit_para_Group>
+  <adjust_para_Group>
+    <int_para>
+      <Name>Zero point calibration</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>0</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+      <Value>0.00</Value>
+    </int_para>
+    <int_para>
+      <Name>Current calibration</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>1</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+      <Value>-25.00</Value>
+    </int_para>
+    <int_para>
+      <Name>Voltage calibration</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>2</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+      <Value>3.300</Value>
+    </int_para>
+  </adjust_para_Group>
+  <warnHistory>
+    <teleSignalByteNum>15</teleSignalByteNum>
+    <teleSignal>
+      <Name>Voltage sensor invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Temperature sensor invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Current sensor invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Button switch invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Cell differential pressure invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charge switch invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Discharge switch invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Current limit switch invalidation</Name>
+      <Type>Warn</Type>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Monomer high voltage alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Monomer overvoltage protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Monomer low pressure alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Monomer undervoltage protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Total pressure high pressure alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Total_voltage overvoltage protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Total pressure low pressure alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Total_voltage undervoltage protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charging high temperature warning</Name>
+      <Type>Warn</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charging over temperature protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charging low temperature warning</Name>
+      <Type>Warn</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charging under-temperature protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Discharge high temperature warning</Name>
+      <Type>Warn</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Discharge over temperature protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Discharge low temperature warning</Name>
+      <Type>Warn</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Discharge under-temperature protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Ambient high temperature alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Environmental over-temperature protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Ambient low temperature alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Environmental under-temperature protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Power over temperature protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Power high temperature alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Cell low temperature heating</Name>
+      <Type>Warn</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Secondary tripping protection</Name>
+      <Type>Warn</Type>
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charging overcurrent warning</Name>
+      <Type>Warn</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charge overcurrent protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Discharge overcurrent warning</Name>
+      <Type>Warn</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Discharge overcurrent protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Transient overcurrent protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Output short circuit protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Transient overcurrent lockout</Name>
+      <Type>Protect</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Output short circuit locking</Name>
+      <Type>Protect</Type>
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Charging high voltage protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Intermittent power supply waiting</Name>
+      <Type>Warn</Type>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Remaining capacity alarm</Name>
+      <Type>Warn</Type>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Remaining capacity protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Battery low voltage forbidden charging</Name>
+      <Type>Protect</Type>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Output reverse connection protection</Name>
+      <Type>Protect</Type>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Output connection failure</Name>
+      <Type>Protect</Type>
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Automatic charging waiting</Name>
+      <Type>Warn</Type>
+      <ByteIndex>8</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>Manual charging and waiting</Name>
+      <Type>Warn</Type>
+      <ByteIndex>8</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>EEPROM malfunction</Name>
+      <Type>Warn</Type>
+      <ByteIndex>9</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </teleSignal>
+    <teleSignal>
+      <Name>RTC clock malfunction</Name>
+      <Type>Warn</Type>
+      <ByteIndex>9</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </teleSignal>
+    <teleMeter>
+      <Name>Cell01</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell02</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell03</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell04</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell05</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell06</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell07</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell08</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell09</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell10</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell11</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell12</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell13</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell14</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell15</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Cell16</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Temp 1</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Temp 2</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Temp 3</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Temp 4</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Ambient</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Power</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Current</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>A</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Total voltage</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Remaining capacity</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>Ah</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Total capacity</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>Ah</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>SOC</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>%</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Rated capacity</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>Ah</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Battery cycles</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>times</UnitName>
+      <Scale>1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>SOH</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>%</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+    <teleMeter>
+      <Name>Port voltage</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+  </warnHistory>
+<canProtocol>
+  	<canTypeBlock>
+  		<Name>PN-GDLT</Name>	
+  		<Type>1</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>GRWT</Name>	
+  		<Type>2</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>VCTR</Name>	
+  		<Type>3</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>SMA-SF</Name>	
+  		<Type>4</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>GINL</Name>	
+  		<Type>5</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>STUD</Name>	
+  		<Type>6</Type>
+  	</canTypeBlock>
+  </canProtocol>
+<serialPortProtocol>
+  
+  </serialPortProtocol>
+</protocolConfig>

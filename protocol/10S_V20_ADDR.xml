@@ -1,0 +1,2812 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<protocolConfig>
+  
+  <!--========================文件标识===========================-->
+  <filetype>Protocol</filetype>
+
+  <!--========================基本设定===========================-->
+  <basicConfig>
+    <protocolName>BMS-10S</protocolName>
+    <protocolVersion>2.0</protocolVersion>
+
+    <ignoreCheckRTN>0</ignoreCheckRTN>
+    <ignoreCheckLEN>0</ignoreCheckLEN>        
+
+    <freshMode>连续</freshMode>   <!--连续 / 交错-->
+    <freshDuty>2</freshDuty>
+    
+    <batVoltName>电池总压</batVoltName>
+    <batAmpName>充放电流</batAmpName>
+    <batCurCapName>剩余容量</batCurCapName>
+    <batAllCapName>电池容量</batAllCapName>
+
+    <cellTmprPreName>电池温度</cellTmprPreName>
+
+    <!-- 摄氏度 / ℃ / 绝对温度 / K  /华氏温度 / F -->
+    <protocolMeterTmprType>K</protocolMeterTmprType>
+    <protocolParaTmprType>K</protocolParaTmprType>
+      
+</basicConfig>
+  <modeText_Group>
+
+  </modeText_Group>
+  
+  <!--===============遥测定义===========================-->
+  <teleMeter_Group>
+    <!--============================================-->    
+    <teleMeter_Block>
+      
+      <NumFieldEnable>True</NumFieldEnable>
+      <teleMeterType>Cell</teleMeterType>  
+      
+      <teleMeterNode>
+        <Name>电芯01</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯02</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯03</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯04</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯05</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯06</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯07</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯08</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>电芯09</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+      <teleMeterNode>
+        <Name>电芯10</Name>    　
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.001</Scale>
+      </teleMeterNode>　
+
+     
+
+    </teleMeter_Block>
+    
+    <!--============================================-->
+    
+    <teleMeter_Block>
+      
+      <NumFieldEnable>True</NumFieldEnable>
+      <teleMeterType>Tmpr</teleMeterType>
+      
+      <teleMeterNode>
+        <Name>电池温度1</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <!-- 摄氏度 / ℃ / 绝对温度 / K  /华氏温度 / F -->
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>电池温度2</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <!-- 摄氏度 / ℃ / 绝对温度 / K  /华氏温度 / F -->
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>电池温度3</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <!-- 摄氏度 / ℃ / 绝对温度 / K  /华氏温度 / F -->
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>电池温度4</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <!-- 摄氏度 / ℃ / 绝对温度 / K  /华氏温度 / F -->
+        <Scale>0.1</Scale>
+      </teleMeterNode>　
+　　　　
+
+      <teleMeterNode>
+        <Name>环境温度</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <!-- 摄氏度 / ℃ / 绝对温度 / K  /华氏温度 / F -->
+        <Scale>0.1</Scale>
+      </teleMeterNode>　
+ 　　　
+      <teleMeterNode>
+        <Name>功率温度</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>℃</UnitName>
+        <!-- 摄氏度 / ℃ / 绝对温度 / K  /华氏温度 / F -->
+        <Scale>0.1</Scale>
+      </teleMeterNode>　
+　
+    </teleMeter_Block>
+    
+    <!--============================================-->
+    <teleMeter_Block>
+      <NumFieldEnable>False</NumFieldEnable>
+      <teleMeterType>Other</teleMeterType>
+
+      <teleMeterNode>
+        <Name>充放电流</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>A</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>电池总压</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>剩余容量</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>Ah</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>      
+    </teleMeter_Block>
+    <!--============================================-->
+    <teleMeter_Block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <teleMeterType>Other</teleMeterType>
+
+      <teleMeterNode>
+        <Name>电池容量</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>Ah</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>SOC</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>%</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>额定容量</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>Ah</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>循环次数</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>次</UnitName>
+        <Scale>1</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>SOH</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>%</UnitName>
+        <Scale>0.1</Scale>
+      </teleMeterNode>
+
+      <teleMeterNode>
+        <Name>母线电压</Name>
+        <ByteNum>2</ByteNum>
+        <UnitName>V</UnitName>
+        <Scale>0.01</Scale>
+      </teleMeterNode>
+　　
+    </teleMeter_Block>
+  </teleMeter_Group>          
+  
+  <!--===========================遥控定义===========================-->
+  <teleControl_Group>
+
+    <teleCtrlByteNum>2</teleCtrlByteNum>
+
+    <teleControl>
+      <Name>放电控制</Name>　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>0</BitIndex>
+      <Type>OnOff</Type>        <!--Simple 或 OnOff-->
+    </teleControl>
+
+    <teleControl>
+      <Name>充电控制</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>1</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+
+    <teleControl>
+      <Name>限流控制</Name>　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>2</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+
+    <teleControl>
+      <Name>温控控制</Name>　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>3</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+
+    <teleControl>
+      <Name>系统关机</Name>　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>4</BitIndex>
+      <Type>Shutdown</Type>
+    </teleControl>
+
+    <teleControl>
+      <Name>恢复出厂</Name>　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>5</BitIndex>
+      <Type>Reset</Type>
+    </teleControl>
+    
+    <!--<teleControl>
+      <Name>清除循环次数</Name>　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>5</BitIndex>
+      <Type>Simple</Type>
+    </teleControl>
+
+    <teleControl>
+      <Name>蜂鸣器</Name>　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>6</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>
+
+    <teleControl>
+      <Name>温控开关</Name>
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>7</BitIndex>
+      <Type>OnOff</Type>
+    </teleControl>-->
+
+  </teleControl_Group>
+
+
+  <!--===========================遥信定义===========================-->
+  <teleSignal_Group>
+    
+    <!--=================电压===========================-->
+    <teleSignal_block>
+      <NumFieldEnable>True</NumFieldEnable>
+      <SignalType>GB_Byte</SignalType>
+
+      <teleSignalGB>
+        <Name>电芯01</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯01</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯02</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯02</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯03</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯03</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯04</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯04</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯05</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯05</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯06</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯06</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯07</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯07</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯08</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯08</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯09</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯09</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电芯10</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电芯10</LinkTeleMeterName>
+      </teleSignalGB>
+
+   
+
+    </teleSignal_block>
+
+    <!--=================温度===========================-->
+    <teleSignal_block>
+      
+      <NumFieldEnable>True</NumFieldEnable>
+      <SignalType>GB_Byte</SignalType>
+
+      <teleSignalGB>
+        <Name>电池温度1</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电池温度1</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电池温度2</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电池温度2</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电池温度3</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电池温度3</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电池温度4</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电池温度4</LinkTeleMeterName>
+      </teleSignalGB>
+
+
+      <teleSignalGB>
+        <Name>环境温度</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>环境温度</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>功率温度</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>功率温度</LinkTeleMeterName>
+      </teleSignalGB>
+
+    </teleSignal_block>
+    <!--=================其他===========================-->
+    <teleSignal_block>
+
+      <NumFieldEnable>False</NumFieldEnable>
+      <SignalType>GB_Byte</SignalType>
+
+      <teleSignalGB>
+        <Name>充放电流</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>充放电流</LinkTeleMeterName>
+      </teleSignalGB>
+
+      <teleSignalGB>
+        <Name>电池总压</Name>      　　　
+        <Type>Protect</Type>
+        <LinkTeleMeterName>电池总压</LinkTeleMeterName>
+      </teleSignalGB>
+
+    </teleSignal_block>
+    <!--================位信号===========================-->
+    <teleSignal_block>
+            
+      <!--<teleSignalByteNumField>True</teleSignalByteNumField>
+      <teleSignalByteNum>19</teleSignalByteNum>-->
+
+      <NumFieldEnable>True</NumFieldEnable>
+      <SignalType>Ext_Bit</SignalType>
+      <ByteNumAdjust>-1</ByteNumAdjust>
+
+
+      <teleSignal>
+        <Name>电压传感失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>温度传感失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电流传感失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>按键开关失效</Name>   　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电芯压差失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电开关失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电开关失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>限流开关失效</Name>   　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+
+      <teleSignal>
+        <Name>单体高压告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>单体过压保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>单体低压告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>单体欠压保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压高压告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压过压保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压低压告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压欠压保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+
+      <teleSignal>
+        <Name>充电高温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电过温保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电低温告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电欠温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电高温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电过温保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电低温告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电欠温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+
+      <teleSignal>
+        <Name>环境高温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>环境过温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>环境低温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>环境欠温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>功率过温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>功率高温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电芯低温加热</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>二级脱扣保护</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+
+      <teleSignal>
+        <Name>充电过流告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电过流保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电过流告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电过流保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>瞬态电流保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>输出短路保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>瞬态保护锁死</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>短路保护锁死</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+   
+      <teleSignal>
+        <Name>充电高压保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>间歇补电等待</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>剩余容量告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>剩余容量保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电芯低压禁充</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>输出反接保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>输出连接故障</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+
+
+      <teleSignal>
+        <Name>放电开关</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>0</BitIndex>
+        <linkTeleCtrlName>放电控制</linkTeleCtrlName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电开关</Name>   　　　
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>1</BitIndex>
+        <linkTeleCtrlName>充电控制</linkTeleCtrlName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>限流开关</Name>    　　　
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>2</BitIndex>
+        <linkTeleCtrlName>限流控制</linkTeleCtrlName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>温控开关</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>6</ByteIndex>
+        <BitIndex>3</BitIndex>
+        <linkTeleCtrlName>温控控制</linkTeleCtrlName>
+      </teleSignal>
+
+
+      <teleSignal>
+        <Name>均衡1</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>0</BitIndex>
+        <LinkTeleMeterName>电芯01</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡2</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>1</BitIndex>
+        <LinkTeleMeterName>电芯02</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡3</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>2</BitIndex>
+        <LinkTeleMeterName>电芯03</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡4</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>3</BitIndex>
+        <LinkTeleMeterName>电芯04</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡5</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>4</BitIndex>
+        <LinkTeleMeterName>电芯05</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡6</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>5</BitIndex>
+        <LinkTeleMeterName>电芯06</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡7</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>6</BitIndex>
+        <LinkTeleMeterName>电芯07</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡8</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>7</ByteIndex>
+        <BitIndex>7</BitIndex>
+        <LinkTeleMeterName>电芯08</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡9</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>0</BitIndex>
+        <LinkTeleMeterName>电芯09</LinkTeleMeterName>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>均衡10</Name>      　　　
+        <Type>Normal</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>1</BitIndex>
+        <LinkTeleMeterName>电芯10</LinkTeleMeterName>
+      </teleSignal>
+
+     
+
+      <teleSignal>
+        <Name>自动充电等待</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>12</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>手动充电等待</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>12</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+
+
+      <teleSignal>
+        <Name>EEPROM故障</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>RTC时钟故障</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电压校准未做</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电流校准未做</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>零点校准未做</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>万年历未同步</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>13</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+
+    </teleSignal_block>
+
+    <!--===============工作模式===========================-->
+    <teleSignal_block>
+      
+      <NumFieldEnable>False</NumFieldEnable>
+      <SignalType>Mode_Byte</SignalType>
+      
+      <modeText>
+        <value>1</value>
+        <text>放电</text>
+      </modeText>
+      <modeText>
+        <value>2</value>
+        <text>充电</text>
+      </modeText>
+      <modeText>
+        <value>4</value>
+        <text>浮充</text>
+      </modeText>
+      <modeText>
+        <value>8</value>
+        <text>满电</text>
+      </modeText>
+      <modeText>
+        <value>10</value>
+        <text>待机</text>
+      </modeText>
+      <modeText>
+        <value>20</value>
+        <text>关机</text>
+      </modeText>
+      
+    </teleSignal_block>
+      
+  </teleSignal_Group>
+
+  <!--===========================整形参数定义===========================-->
+  <int_para_Group> 
+    
+    <!--整形参数定义-->
+    <int_para>
+      <Name>单体高压告警</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>0</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>单体高压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>1</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>单体低压告警</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>2</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>单体低压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>单体过压保护</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>4</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>单体过压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>5</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>单体欠压保护</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>6</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    
+    <int_para>
+      <Name>单体欠压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>7</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+
+
+    <int_para>
+      <Name>均衡开启电压</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>8</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>电芯低压禁充</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>9</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压高压告警</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压高压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压低压告警</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>C</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压低压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>D</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压过压保护</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>E</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压过压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>F</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压欠压保护</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>10</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>总压欠压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>11</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电过压保护</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>12</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电过压恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>13</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+
+    <int_para>
+      <Name>充电高温告警</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>14</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电高温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>15</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电低温告警</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>16</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电低温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>17</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电过温保护</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>18</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电过温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>19</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电欠温保护</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电欠温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+
+
+    <int_para>
+      <Name>放电高温告警</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1C</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电高温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1D</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电低温告警</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1E</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电低温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>1F</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电过温保护</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>20</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电过温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>21</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电欠温保护</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>22</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电欠温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>23</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+
+    <int_para>
+      <Name>电芯低温加热</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>24</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>电芯加热恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>25</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+
+    <int_para>
+      <Name>环境高温告警</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>26</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>环境高温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>27</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>环境低温告警</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>28</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>环境低温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>29</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>环境过温保护</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>环境过温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>环境欠温保护</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2C</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>环境欠温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2D</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+
+    <int_para>
+      <Name>功率高温告警</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2E</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>功率高温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>2F</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>功率过温保护</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>30</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>功率过温恢复</Name>
+      <UnitName>℃</UnitName>
+      <ParaIndex>31</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+
+
+
+    <int_para>
+      <Name>充电过流告警</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>32</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电过流恢复</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>33</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电过流告警</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>34</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电过流恢复</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>35</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电过流保护</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>36</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>   
+
+    <int_para>
+      <Name>放电过流保护</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>37</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+   
+    <int_para>
+      <Name>瞬态过流保护</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>38</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>输出软启延时</Name>
+      <UnitName>mS</UnitName>
+      <ParaIndex>39</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>电池额定容量</Name>
+      <UnitName>Ah</UnitName>
+      <ParaIndex>3A</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>电池剩余容量</Name>
+      <UnitName>Ah</UnitName>
+      <ParaIndex>3B</ParaIndex>
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+		<!--字节参数-->
+
+    <int_para>
+      <Name>电芯失效压差</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3C</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>电芯失效恢复</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3D</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.01</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>均衡开启压差</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3E</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>均衡结束压差</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>3F</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.001</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>静态均衡时间</Name>
+      <UnitName>时</UnitName>
+      <ParaIndex>40</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>电池串联节数</Name>
+      <UnitName>串</UnitName>
+      <ParaIndex>41</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电过流延时</Name>
+      <UnitName>秒</UnitName>
+      <ParaIndex>42</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>放电过流延时</Name>
+      <UnitName>秒</UnitName>
+      <ParaIndex>43</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+
+
+    <int_para>
+      <Name>瞬态过流延时</Name>
+      <UnitName>mS</UnitName>
+      <ParaIndex>44</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>过流恢复延时</Name>
+      <UnitName>秒</UnitName>
+      <ParaIndex>45</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>过流恢复次数</Name>
+      <UnitName>次</UnitName>
+      <ParaIndex>46</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电限流延时</Name>
+      <UnitName>分</UnitName>
+      <ParaIndex>47</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>充电激活延时</Name>
+      <UnitName>分</UnitName>
+      <ParaIndex>48</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+    <int_para>
+      <Name>充电激活间隔</Name>
+      <UnitName>时</UnitName>
+      <ParaIndex>49</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+     <int_para>
+      <Name>充电激活次数</Name>
+      <UnitName>次</UnitName>
+      <ParaIndex>4A</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>工作记录间隔</Name>
+      <UnitName>分</UnitName>
+      <ParaIndex>4B</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+    <int_para>
+      <Name>待机记录间隔</Name>
+      <UnitName>分</UnitName>
+      <ParaIndex>4C</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+    <int_para>
+      <Name>待机关机延时</Name>
+      <UnitName>时</UnitName>
+      <ParaIndex>4D</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>剩余容量告警</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>4E</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+     <int_para>
+      <Name>剩余容量保护</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>4F</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+    <int_para>
+      <Name>间隔补电容量</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>50</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+     <int_para>
+      <Name>循环累计容量</Name>
+      <UnitName>%</UnitName>
+      <ParaIndex>51</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+    
+    <int_para>
+      <Name>连接故障阻抗</Name>
+      <UnitName>mΩ</UnitName>
+      <ParaIndex>52</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    
+    
+    <int_para>
+      <Name>补偿点1位置</Name>
+      <UnitName>串</UnitName>
+      <ParaIndex>53</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>补偿点1阻抗</Name>
+      <UnitName>mΩ</UnitName>
+      <ParaIndex>54</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>
+    
+    <int_para>
+      <Name>补偿点2位置</Name>
+      <UnitName>串</UnitName>
+      <ParaIndex>55</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>1</Scale>
+    </int_para>
+
+    <int_para>
+      <Name>补偿点2阻抗</Name>
+      <UnitName>mΩ</UnitName>
+      <ParaIndex>56</ParaIndex>
+      <ByteNum>1</ByteNum>
+      <Scale>0.1</Scale>
+    </int_para>    
+
+  </int_para_Group>
+  
+  <!--============================位参数定义============================-->
+  <bit_para_Group>
+    
+    <bitParaStartIndex>58</bitParaStartIndex>
+    <bitParaByteNum>8</bitParaByteNum>
+
+    <bit_para>
+      <Name>电压传感失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>温度传感失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>电流传感失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>按键开关失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>电芯压差失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>充电开关失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>放电开关失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>限流开关失效</Name>      　　　
+      <ByteIndex>0</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+
+    <bit_para>
+      <Name>单体高压告警</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>单体过压保护</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>单体低压告警</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>单体欠压保护</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>总压高压告警</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>总压过压保护</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>总压低压告警</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>总压欠压保护</Name>      　　　
+      <ByteIndex>1</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+
+    <bit_para>
+      <Name>充电高温告警</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>充电过温保护</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>充电低温告警</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>充电欠温保护</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>放电高温告警</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>放电过温保护</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>放电低温告警</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>放电欠温保护</Name>      　　　
+      <ByteIndex>2</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+
+    <bit_para>
+      <Name>环境高温告警</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>环境过温保护</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>环境低温告警</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>环境欠温保护</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>功率过温保护</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>功率高温告警</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>电芯低温加热</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+    
+    <bit_para>
+      <Name>二级脱扣保护</Name>      　　　
+      <ByteIndex>3</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+    <bit_para>
+      <Name>充电过流告警</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>充电过流保护</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>放电过流告警</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>放电过流保护</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>瞬态电流保护</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>输出短路保护</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>瞬态过流锁定</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>输出短路锁定</Name>      　　　
+      <ByteIndex>4</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+
+    <bit_para>
+      <Name>充电高压保护</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>间歇补电功能</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>剩余容量告警</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>剩余容量保护</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>电芯低压禁充</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>输出反接保护</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>输出连接故障</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>输出软启功能</Name>      　　　
+      <ByteIndex>5</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+
+    <bit_para>
+      <Name>充电均衡功能</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>静态均衡功能</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>超时禁止均衡</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>过温禁止均衡</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>自动激活充电</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>手动激活充电</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>主动限流充电</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>被动限流充电</Name>      　　　
+      <ByteIndex>6</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+
+
+    <bit_para>
+      <Name>开关关机功能</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>0</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>待机关机功能</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>1</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>历史记录功能</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>2</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>LCD 显示功能</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>3</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>蓝牙通信功能</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>4</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>自动地址编码</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>5</BitIndex>
+    </bit_para>
+	
+	<bit_para>
+      <Name>并机外部轮询</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>6</BitIndex>
+    </bit_para>
+
+    <bit_para>
+      <Name>单机1.0C充电</Name>      　　　
+      <ByteIndex>7</ByteIndex>
+      <BitIndex>7</BitIndex>
+    </bit_para>
+
+
+
+  </bit_para_Group>
+
+  <!--===========================校准参数定义===========================-->
+  <adjust_para_Group>    
+    <int_para>
+      <Name>零点校准</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>0</ParaIndex>
+      <!--16进制 80 即十进制128-->
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+      <Value>0.00</Value>
+    </int_para>
+    
+    <int_para>
+      <Name>电流校准</Name>
+      <UnitName>A</UnitName>
+      <ParaIndex>1</ParaIndex>
+      <!--16进制 80 即十进制128-->
+      <ByteNum>2</ByteNum>
+      <Scale>0.01</Scale>
+      <Value>-25.00</Value>
+    </int_para>
+
+    <int_para>
+      <Name>电压校准</Name>
+      <UnitName>V</UnitName>
+      <ParaIndex>2</ParaIndex>
+      <!--16进制 80 即十进制128-->
+      <ByteNum>2</ByteNum>
+      <Scale>0.001</Scale>
+      <Value>3.300</Value>
+    </int_para>
+  </adjust_para_Group>
+    <!--===========================历史告警定义============================-->
+  <warnHistory>   
+        
+    <teleSignalByteNum>15</teleSignalByteNum>
+
+      <!--Byte0-->
+      <teleSignal>
+        <Name>电压传感失效</Name>     　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>温度传感失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电流传感失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>按键开关失效</Name>   　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电芯压差失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电开关失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电开关失效</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>限流开关失效</Name>   　　　
+        <Type>Warn</Type>
+        <ByteIndex>0</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+
+    <!--Byte1-->
+      <teleSignal>
+        <Name>单体高压告警</Name>     　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>单体过压保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>单体低压告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>单体欠压保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压高压告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压过压保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压低压告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>总压欠压保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>1</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+      
+      <!--Byte2-->
+      <teleSignal>
+        <Name>充电高温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电过温保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电低温告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电欠温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电高温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电过温保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电低温告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电欠温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>2</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+
+      <!--Byte3-->
+      <teleSignal>
+        <Name>环境高温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>环境过温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>环境低温告警</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>环境欠温保护</Name>   　　　
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>功率过温保护</Name>    　　　
+        <Type>Protect</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>功率高温告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电芯低温加热</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>二级脱扣保护</Name>    　　　
+        <Type>Warn</Type>
+        <ByteIndex>3</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+   
+
+      <!--Byte4-->
+      <teleSignal>
+        <Name>充电过流告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>充电过流保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电过流告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>放电过流保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>瞬态过流保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>输出短路保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>瞬态过流锁定</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>输出短路锁定</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>4</ByteIndex>
+        <BitIndex>7</BitIndex>
+      </teleSignal>
+
+
+      <!--Byte5-->
+      <teleSignal>
+        <Name>充电高压保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>间歇补电等待</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>剩余容量告警</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>2</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>剩余容量保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>3</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>电芯低压禁充</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>输出反接保护</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>输出连接故障</Name>      　　　
+        <Type>Protect</Type>
+        <ByteIndex>5</ByteIndex>
+        <BitIndex>6</BitIndex>
+      </teleSignal>
+
+
+      <!--Byte8-->
+      <teleSignal>
+        <Name>自动充电等待</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>4</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>手动充电等待</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>8</ByteIndex>
+        <BitIndex>5</BitIndex>
+      </teleSignal>
+
+
+      <!--Byte9-->
+      <teleSignal>
+        <Name>EEPROM 故障</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>9</ByteIndex>
+        <BitIndex>0</BitIndex>
+      </teleSignal>
+
+      <teleSignal>
+        <Name>RTC 时钟故障</Name>      　　　
+        <Type>Warn</Type>
+        <ByteIndex>9</ByteIndex>
+        <BitIndex>1</BitIndex>
+      </teleSignal>
+
+
+
+    <!-- 若无teleMeter定义 表明历史记录的遥测部分完全依照前面遥测部分定义-->    
+    
+    <teleMeter>
+      <Name>电芯01</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯02</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯03</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯04</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯05</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯06</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯07</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯08</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯09</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯10</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯11</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯12</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯13</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯14</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯15</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电芯16</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.001</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>温度1</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>温度2</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>温度3</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>温度4</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>环境</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>功率</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>℃</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>电流</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>A</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>　
+
+    <teleMeter>
+      <Name>总压</Name>
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>剩余容量</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>Ah</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>电池容量</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>Ah</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>SOC</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>%</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>额定容量</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>Ah</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>循环次数</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>次</UnitName>
+      <Scale>1</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>SOH</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>%</UnitName>
+      <Scale>0.1</Scale>
+    </teleMeter>
+
+    <teleMeter>
+      <Name>端口电压</Name>    　
+      <ByteNum>2</ByteNum>
+      <UnitName>V</UnitName>
+      <Scale>0.01</Scale>
+    </teleMeter>
+
+  </warnHistory>
+<!--========================CAN协议列表=================================-->
+  <canProtocol>
+  	<canTypeBlock>
+  		<Name>PN-GDLT</Name>	
+  		<Type>1</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>GRWT</Name>	
+  		<Type>2</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>VCTR</Name>	
+  		<Type>3</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>SMA-SF</Name>	
+  		<Type>4</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>GINL</Name>	
+  		<Type>5</Type>
+  	</canTypeBlock>
+  	<canTypeBlock>
+  		<Name>STUD</Name>	
+  		<Type>6</Type>
+  	</canTypeBlock>
+  </canProtocol>
+  
+   <!--========================485协议列表=================================-->
+  <serialPortProtocol>
+  	
+  	
+  </serialPortProtocol>
+  <!--=========================历史维护记录定义============================-->
+  <maintainHistory>
+
+  </maintainHistory>
+ 
+
+</protocolConfig>
