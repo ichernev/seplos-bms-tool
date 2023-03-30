@@ -6,6 +6,25 @@ GUI software (Battery Manager).
 I didn't really like that, so I wrote a python script that can load/store
 settings, and also supports the main status query (code 42).
 
+# Usage
+
+    # prep env
+    python3 -m venv .venv
+    . .venv/bin/activate
+    pip install -r requirements.txt # only pydantic ATM
+
+    # assuming the BMS is at /dev/ttyUSB0 (check sudo "python seplos.py -h" for help)
+    # show current stats
+    sudo python seplos.py metrics
+
+    # get bms settings, and store them in XML file
+    sudo python seplos.py --protocol protocol/protocol.xml \
+        download-settings --file settings.xml
+
+    # change settings in xml file, then upload new settings
+    sudo python seplos.py --protocol protocol/protocol.xml \
+        upload-settings --file settings.xml
+
 # Protocol XML
 
 At least in my case the Battery Management software also came with a folder
