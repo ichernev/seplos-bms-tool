@@ -47,6 +47,9 @@ class StreamReader:
     def remainder(self):
         return self._buffer[self._offset:]
 
+    def remaining(self):
+        return len(self._buffer) - self._offset
+
 
 class SeplosProtocol(BaseModel):
 
@@ -92,12 +95,15 @@ class SeplosProtocol(BaseModel):
         byte_index: int
         bit_index: int
 
+    class Signal(BitParam):
+        typ: str
+
     int_params: list[IntParam]
     bit_param_bytes: int
     bit_params: list[BitParam]
 
-    # def __init__(self, proto_file):
-    #     self._parse(proto_file)
+    signal_bit_params: list[Signal]
+    signal_modes: dict[int, str]
 
     @classmethod
     def from_proto_file(cls, proto_file: str):
@@ -134,9 +140,31 @@ class SeplosProtocol(BaseModel):
                 bit_index=bit_index,
             ))
 
+        # teleSignal -- last 2 blocks
+        signal_bit_params = []
+        signal_group = root.find('teleSignal_Group')
+
+        signal_bit_group = signal_group.findall('teleSignal_block')[-2]
+        for signal in signal_bit_group.findall('teleSignal'):
+            signal_bit_params.append(cls.Signal(
+                name=signal.findtext('Name'),
+                typ=signal.findtext('Type'),
+                bit_index=signal.findtext('BitIndex'),
+                byte_index=signal.findtext('ByteIndex'),
+            ))
+
+        signal_modes = {}
+        signal_mode_group = signal_group.findall('teleSignal_block')[-1]
+        for mode_map in signal_mode_group.findall('modeText'):
+            value = mode_map.findtext('value')
+            text = mode_map.findtext('text')
+            signal_modes[int(value, 16)] = text
+
         return cls(int_params=int_params,
                    bit_param_bytes=bit_group.findtext('bitParaByteNum'),
-                   bit_params=bit_params)
+                   bit_params=bit_params,
+                   signal_bit_params=signal_bit_params,
+                   signal_modes=signal_modes)
 
     def get_param(self, name=None, idx=None) -> IntParam:
         maymatch = lambda a, b: a == b if a is not None else True
@@ -281,7 +309,7 @@ class SeplosParams(BaseModel):
             f.write('<?xml version="1.0" encoding="utf-8"?>\n')
             f.write(ET.tostring(paraGroup, encoding='unicode'))
 
-class StatusReply(BaseModel):
+class MeterReply(BaseModel):
     ncells: int
     cell_mv: list[int]
     ntemps: int
@@ -324,6 +352,61 @@ class StatusReply(BaseModel):
             soh_percent=s.read_hex(4) / 10,
             port_voltage_v=s.read_hex(4) / 100,
         )
+
+
+class SignalReply(BaseModel):
+    cells: list[int]
+    temps: list[int]
+    current: int
+    total_voltage: int
+    flag_bytes: list[int]
+    mode: int
+
+    @classmethod
+    def from_reply(cls, data):
+        s = StreamReader(data, 4)
+        ncells = s.read_hex(2)
+        cells = [s.read_hex(2) for _ in range(ncells)]
+        ntemps = s.read_hex(2)
+        temps = [s.read_hex(2) for _ in range(ntemps)]
+        current = s.read_hex(2)
+        total_voltage = s.read_hex(2)
+        nflag_bytes = s.read_hex(2) - 1 # -1 ByteNumAdjust
+        flag_bytes = [s.read_hex(2) for _ in range(nflag_bytes)]
+        mode = s.read_hex(2)
+        if s.remaining():
+            log("failed to parse signal reply completely, left: '%s'",
+                s.remainder())
+        return cls(
+            cells=cells,
+            temps=temps,
+            current=current,
+            total_voltage=total_voltage,
+            flag_bytes=flag_bytes,
+            mode=mode,
+        )
+
+    def dict_human(self, protocol: SeplosProtocol):
+        """Interpret the bytes, given protocol file (mainly for flags and mode)"""
+
+        flags: dict[str, bool] = {}
+        mode: str = None
+
+        for bit_param in protocol.signal_bit_params:
+            flags[bit_param.name] = bool((self.flag_bytes[bit_param.byte_index] >> bit_param.bit_index) & 1)
+
+        mode = protocol.signal_modes[self.mode]
+
+        return dict(
+            cells=self.cells,
+            temps=self.temps,
+            current=self.current,
+            total_voltage=self.total_voltage,
+            flags=flags,
+            model=mode,
+        )
+
+
 class Reader:
 
     SEEK_START = 0
@@ -438,7 +521,7 @@ class Reader:
         temp_c = [temp_map(s.read_hex(4)) for _ in range(ntemps)]
         sign_map = lambda v: v if v < 2**15 else v - 2**16
 
-        return StatusReply(
+        return cls(
             ncells=ncells,
             cell_mv=cell_mv,
             ntemps=ntemps,
@@ -490,6 +573,8 @@ def main(args):
     data = None
     protocol = None
 
+    if opts.protocol:
+        protocol = SeplosProtocol.from_proto_file(opts.protocol)
     if opts.command == 'meter':
         code = '42'
         data = '00'
@@ -502,10 +587,8 @@ def main(args):
     elif opts.command == 'download-settings':
         code = '47'
         data = '00'
-        protocol = SeplosProtocol.from_proto_file(opts.protocol)
     elif opts.command == 'upload-settings':
         code = 'A1'
-        protocol = SeplosProtocol.from_proto_file(opts.protocol)
         params = SeplosParams.from_save_file(protocol, opts.file)
         data = params.to_msg_body()
     else:
@@ -526,8 +609,12 @@ def main(args):
 
         reply_data = cmdbuf[12:-4]
         if code == '42':
-            parsed = StatusReply.from_reply(reply_data)
+            parsed = MeterReply.from_reply(reply_data)
             log('%s', json.dumps(parsed.dict(), indent=2))
+        elif code == '44':
+            parsed = SignalReply.from_reply(reply_data)
+            human = parsed.dict_human(protocol) if protocol else parsed.dict()
+            log('%s', json.dumps(human, indent=2))
         elif code == '47':
             parsed = SeplosParams.from_msg_body(protocol, reply_data)
             parsed.to_save_file(opts.file)
