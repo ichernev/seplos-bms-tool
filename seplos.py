@@ -6,6 +6,7 @@ import pprint
 import math
 import argparse
 import json
+import datetime
 import xml.etree.ElementTree
 # from typing import Self
 from pydantic import BaseModel
@@ -538,6 +539,21 @@ class Reader:
             port_voltage_v=s.read_hex(4) / 100,
         )
 
+class TimeStamp(BaseModel):
+    dt: datetime.datetime
+
+    @classmethod
+    def from_data(cls, data):
+        sr = StreamReader(data)
+        year, month, day = sr.read_hex(4), sr.read_hex(2), sr.read_hex(2)
+        hour, minute, second = sr.read_hex(2), sr.read_hex(2), sr.read_hex(2)
+
+        return cls(dt=datetime.datetime(year, month, day, hour, minute, second))
+
+    def to_data(self):
+        return ('{dt.year:04X}{dt.month:02X}{dt.day:02X}'
+                '{dt.hour:02X}{dt.minute:02X}{dt.second:02X}').format(dt=self.dt)
+
 def parse_args(args):
     parser = argparse.ArgumentParser("Communicate with seplos BMS")
     parser.add_argument('--address', type=str, default='00',
@@ -551,6 +567,10 @@ def parse_args(args):
     command = parser.add_subparsers(dest='command')
     meter = command.add_parser('meter')
     signal = command.add_parser('signal')
+    get_time = command.add_parser('get-time')
+    set_time = command.add_parser('set-time')
+    set_time.add_argument('--timestamp', type=str,
+                          help="ISO formatted timestamp YYYY-MM-DDTHH:MM:SS")
     raw = command.add_parser('raw')
     raw.add_argument('--code', type=str, required=True,
                      help='command code (2 hex digits)')
@@ -581,6 +601,14 @@ def main(args):
     elif opts.command == 'signal':
         code = '44'
         data = '00'
+    elif opts.command == 'get-time':
+        code = '4D'
+        data = ''
+    elif opts.command == 'set-time':
+        code = '4E'
+        dt_now = (datetime.datetime.fromisoformat(opts.timestamp)
+                  if opts.timestamp else datetime.datetime.now())
+        data = TimeStamp(dt=dt_now).to_data()
     elif opts.command == 'raw':
         code = opts.code
         data = opts.data
@@ -615,6 +643,9 @@ def main(args):
             parsed = SignalReply.from_reply(reply_data)
             human = parsed.dict_human(protocol) if protocol else parsed.dict()
             log('%s', json.dumps(human, indent=2))
+        elif code == '4D':
+            parsed = TimeStamp.from_data(reply_data)
+            log('%s', parsed.dt.isoformat())
         elif code == '47':
             parsed = SeplosParams.from_msg_body(protocol, reply_data)
             parsed.to_save_file(opts.file)
