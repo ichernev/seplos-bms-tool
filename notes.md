@@ -228,3 +228,9 @@ out: ~200046000000FDB4
   - curr+voltage (protect)
   - a lot of flags (~75)
   - 2 more bytes for state (charging/discharging/standby/etc)
+- necessary: sudo stty -F /dev/ttyUSB0 sane -echo -echoe -echok 19200
+
+# Docs
+
+- https://github.com/syssi/esphome-seplos-bms/blob/main/docs/SEPLOS%20BMS%20Communication%20Protocol_V2.0.pdf
+- https://github.com/syssi/esphome-seplos-bms/blob/master/docs/Seplos%2048v%20100A%20BMS%20RS485%20Protocol.pdf
